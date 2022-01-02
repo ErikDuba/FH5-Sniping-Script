@@ -1,15 +1,20 @@
+# Imports
 import keyboard
 import time
 import os
 
+# Function to clear the terminal
 def clear():
     command = 'cls'
     os.system(command)
 
+# Clears terminal, asks to initiate the script
 clear()
 starter = input('Press enter: ')
+# If user input equals 'Enter' it will initiate the script
 if starter == '':
     while True:
+        # Prints the explanation for using the script
         clear()
         print(' ----------------------------------------------------------------------')
         print('|                     Python FH5 Sniping Script                        |')
@@ -21,12 +26,17 @@ if starter == '':
         print('|      (Put the game in windowed mode and put the script over it       |')
         print('|       if you don\'t have a second monitor)                            |')
         print('|   4- It will start counting down from 5 once you start the script.   |')
+        print('|      \'y\' = yes | \'n\' = no                                            |')
         print('|                                                                      |')
         print('|      GOOD LUCK SNIPING!                                              |')
         print(' ----------------------------------------------------------------------')
+
+        # Asks if user wants to start sniping 
         a = str(input('\nDo you want to start the script? y/n: '))
+        # If user input equals 'n' it will close the program immediately
         if a == 'n':
             break
+        # If user input equals 'y' it will start counting down from 5 and will start sniping in 6 seconds
         elif a == 'y':
             clear()    
             for i in range(5, -1, -1):        
@@ -35,6 +45,7 @@ if starter == '':
                 time.sleep(1)
                 clear()        
             print('Sniping...')
+            # The keyboard inputs and timings
             while True:         
                 time.sleep(1)     
                 keyboard.press_and_release('Enter')
@@ -49,15 +60,20 @@ if starter == '':
                 time.sleep(0.35)    
                 keyboard.press_and_release('Enter')
                 time.sleep(0.15)   
-                keyboard.press_and_release('Escape')                                
+                keyboard.press_and_release('Escape')    
+        # If input from -a- doesn't equal 'y' or 'n' it will start a loop where the user will be asked to restart or exit the program                                    
         else:            
             while True:
                 clear()
+                # Asks user for input
                 restart = input('You didn\'t press \'y\' to start the script, do you want to restart? y/n : ')
+                # If user inputs 'y' it will go back to -a-
                 if restart == 'y':
-                    break            
+                    break  
+                # If the user does not input 'y' it will close the program          
                 else:
                     exit()
+# If input from -starter- doesn't equal 'Enter' it will close the program
 else:
     exit()
 clear()    
