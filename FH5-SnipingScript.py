@@ -1,4 +1,4 @@
-# Imports
+# Imports for keyboard inputs, timed delays and a custom function
 import keyboard
 import time
 import os
@@ -11,7 +11,7 @@ def clear():
 # Clears terminal, asks to initiate the script
 clear()
 starter = input('Press enter: ')
-# If user input equals 'Enter' it will initiate the script
+# If user input from -starter- equals 'Enter' it will initiate the script
 if starter == '':
     while True:
         # Prints the explanation for using the script
@@ -30,13 +30,12 @@ if starter == '':
         print('|                                                                      |')
         print('|      GOOD LUCK SNIPING!                                              |')
         print(' ----------------------------------------------------------------------')
-
         # Asks if user wants to start sniping 
         a = str(input('\nDo you want to start the script? y/n: '))
         # If user input equals 'n' it will close the program immediately
         if a == 'n':
             break
-        # If user input equals 'y' it will start counting down from 5 and will start sniping in 6 seconds
+        # If user input from -a- equals 'y' it will start counting down from 5 and will start sniping in 6 seconds
         elif a == 'y':
             clear()    
             for i in range(5, -1, -1):        
@@ -65,14 +64,17 @@ if starter == '':
         else:            
             while True:
                 clear()
-                # Asks user for input
+                # Asks user for input to restart or exit the program
                 restart = input('You didn\'t press \'y\' to start the script, do you want to restart? y/n : ')
-                # If user inputs 'y' it will go back to -a-
+                # If user input from -restart- 'y' it will go loop back to -a-
                 if restart == 'y':
-                    break  
-                # If the user does not input 'y' it will close the program          
+                    break 
+                # If input from -restart- equals 'n' it will close the program
+                elif restart == 'n':
+                    exit() 
+                # If the user does not input 'y' or 'n' it will loop back to -restart-          
                 else:
-                    exit()
+                    continue
 # If input from -starter- doesn't equal 'Enter' it will close the program
 else:
     exit()
