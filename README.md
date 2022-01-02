@@ -1,6 +1,6 @@
                     -FH5-Sniping-Script-
 
-A simple FH5 sniping cript for people who are lazy
+A simple FH5 sniping script for people who are lazy, it's nothing crazy but it works quite well
 1- First select the car you want and the potential max buyout
 2- Make sure to focus the FH5 window when the countdown starts
 3- Second monitor highly recommended because when you want to
