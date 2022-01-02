@@ -48,6 +48,7 @@ if starter == '':
             while True:         
                 time.sleep(1)     
                 keyboard.press_and_release('Enter')
+                # *If you have lag, this one and all the ones with an asterix' are probably the ones you want to prolongue (I recommend increments of +0.1)
                 time.sleep(0.25)
                 keyboard.press_and_release('Enter')
                 time.sleep(0.7)
@@ -57,8 +58,7 @@ if starter == '':
                 time.sleep(0.15)
                 keyboard.press_and_release('Enter')
                 time.sleep(0.35)    
-                keyboard.press_and_release('Enter')
-                time.sleep(0.15)   
+                keyboard.press_and_release('Enter')                   
                 keyboard.press_and_release('Escape')    
         # If input from -a- doesn't equal 'y' or 'n' it will start a loop where the user will be asked to restart or exit the program                                    
         else:            
