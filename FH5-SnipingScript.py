@@ -8,11 +8,11 @@ def clear():
     command = 'cls'
     os.system(command)
 
-# Clears terminal, asks to initiate the script
 clear()
-starter = input('Press enter: ')
-# If user input from -starter- equals 'Enter' it will initiate the script
-if starter == '':
+timer = 0
+start = 1
+# This will initiate the script
+if start == 1:
     while True:
         # Prints the explanation for using the script
         clear()
@@ -35,7 +35,7 @@ if starter == '':
         # If user input equals 'n' it will close the program immediately
         if a == 'n':
             break
-        # If user input from -a- equals 'y' it will start counting down from 5 and will start sniping in 6 seconds
+        # If user input from -a- equals 'y' it will start counting down from 5 and will start sniping
         elif a == 'y':
             clear()    
             for i in range(5, -1, -1):        
@@ -45,22 +45,22 @@ if starter == '':
                 clear()        
             print('Sniping...')
             # The keyboard inputs and timings
-            while True:         
-                time.sleep(1)     
+            while True:                                  
                 keyboard.press_and_release('Enter')
-                # *If you have lag, this one and all the ones with an asterix' are probably the ones you want to prolongue (I recommend increments of +0.1)
+                # *If you have lag, this one and all the ones with asterix' are probably the ones you want to prolongue (I recommend increments of +0.1)
                 time.sleep(0.25)
                 keyboard.press_and_release('Enter')
                 time.sleep(0.7)
                 keyboard.press_and_release('y')                
                 time.sleep(0.25)      
                 keyboard.press_and_release('down')                
-                time.sleep(0.15)
+                time.sleep(0.1)
                 keyboard.press_and_release('Enter')
                 # *
-                time.sleep(0.35)    
+                time.sleep(0.2)    
                 keyboard.press_and_release('Enter')                   
-                keyboard.press_and_release('Escape')    
+                keyboard.press_and_release('Escape') 
+                time.sleep(0.75)   
         # If input from -a- doesn't equal 'y' or 'n' it will start a loop where the user will be asked to restart or exit the program                                    
         else:            
             while True:
@@ -76,7 +76,5 @@ if starter == '':
                 # If the user does not input 'y' or 'n' it will loop back to -restart-          
                 else:
                     continue
-# If input from -starter- doesn't equal 'Enter' it will close the program
-else:
-    exit()
+
 clear()    
