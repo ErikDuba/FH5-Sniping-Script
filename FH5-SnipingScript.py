@@ -9,8 +9,9 @@ def clear():
     os.system(command)
 
 clear()
-timer = 0
-start = 1
+timer = (0.0) # Seconds
+counter = 0 # Times sniped
+start = 1 # Gouda cheese _xX(**[-.meme.-]**)Xx_
 # This will initiate the script
 if start == 1:
     while True:
@@ -37,21 +38,25 @@ if start == 1:
             break
         # If user input from -a- equals 'y' it will start counting down from 5 and will start sniping
         elif a == 'y':
-            clear()    
+            clear()
             for i in range(5, -1, -1):        
                 print('!!FOCUS WINDOW!!\nSniping in: ')        
                 print(str(i) + ' seconds')                
                 time.sleep(1)
-                clear()           
+                clear()
             # The keyboard inputs and timings
             while True:
-                timer = timer + 1
-                print('Sniping...')
+                counter = counter + 1
+                timer = timer + (2.33)
+                clear()                                
+                print('Sniped ' + str(counter) + ' Times')  
+                print('That\'s about ' + str(round(timer, 1)) + ' seconds')                              
                 keyboard.press_and_release('Enter')
                 # *If you have lag, this one and all the ones with asterix' are probably the ones you want to prolongue (I recommend increments of +0.1)
                 time.sleep(0.25)
                 keyboard.press_and_release('Enter')
-                time.sleep(0.8)
+                # *
+                time.sleep(0.78)
                 keyboard.press_and_release('y')                
                 time.sleep(0.25)      
                 keyboard.press_and_release('down')                
@@ -60,12 +65,9 @@ if start == 1:
                 # *
                 time.sleep(0.2)    
                 keyboard.press_and_release('Enter')                   
-                keyboard.press_and_release('Escape')
-                clear()                                
-                print('Sniped ' + str(timer) + ' Times')
-                time.sleep(0.75)                 
-                clear()
-                   
+                keyboard.press_and_release('Escape') 
+                time.sleep(0.75) 
+                  
         # If input from -a- doesn't equal 'y' or 'n' it will start a loop where the user will be asked to restart or exit the program                                    
         else:            
             while True:
@@ -83,3 +85,5 @@ if start == 1:
                     continue
 
 clear()    
+
+
