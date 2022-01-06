@@ -42,15 +42,16 @@ if start == 1:
                 print('!!FOCUS WINDOW!!\nSniping in: ')        
                 print(str(i) + ' seconds')                
                 time.sleep(1)
-                clear()        
-            print('Sniping...')
+                clear()           
             # The keyboard inputs and timings
-            while True:                                  
+            while True:
+                timer = timer + 1
+                print('Sniping...')
                 keyboard.press_and_release('Enter')
                 # *If you have lag, this one and all the ones with asterix' are probably the ones you want to prolongue (I recommend increments of +0.1)
                 time.sleep(0.25)
                 keyboard.press_and_release('Enter')
-                time.sleep(0.7)
+                time.sleep(0.8)
                 keyboard.press_and_release('y')                
                 time.sleep(0.25)      
                 keyboard.press_and_release('down')                
@@ -59,8 +60,12 @@ if start == 1:
                 # *
                 time.sleep(0.2)    
                 keyboard.press_and_release('Enter')                   
-                keyboard.press_and_release('Escape') 
-                time.sleep(0.75)   
+                keyboard.press_and_release('Escape')
+                clear()                                
+                print('Sniped ' + str(timer) + ' Times')
+                time.sleep(0.75)                 
+                clear()
+                   
         # If input from -a- doesn't equal 'y' or 'n' it will start a loop where the user will be asked to restart or exit the program                                    
         else:            
             while True:
