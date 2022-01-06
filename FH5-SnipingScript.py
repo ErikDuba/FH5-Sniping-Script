@@ -48,9 +48,10 @@ if start == 1:
             while True:
                 counter = counter + 1
                 timer = timer + (2.33)
+                minuteCounter = timer / 60
                 clear()                                
                 print('Sniped ' + str(counter) + ' Times')  
-                print('That\'s about ' + str(round(timer, 1)) + ' seconds')                              
+                print('That\'s about ' + str(round(timer, 1)) + ' seconds (' + str(round(minuteCounter, 1)) + ' minutes)')                              
                 keyboard.press_and_release('Enter')
                 # *If you have lag, this one and all the ones with asterix' are probably the ones you want to prolongue (I recommend increments of +0.1)
                 time.sleep(0.25)
@@ -85,5 +86,3 @@ if start == 1:
                     continue
 
 clear()    
-
-
